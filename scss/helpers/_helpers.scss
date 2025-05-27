@@ -1,0 +1,189 @@
+//Backgrounds
+.bgPrimary {
+  background-color: $color__site-primary;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul li,
+  span,
+  a:not(.btn) {
+    color: $color__site-white;
+  }
+  .embla__bottom-text {
+    color: $color__site-white;
+  }
+  h1 b,
+  h2 b,
+  h3 b,
+  h4 b {
+    color: $color__site-secondary;
+  }
+  .embla__dot {
+    background-color: $color__site-white;
+    &--selected {
+      background-color: $color__site-secondary;
+    }
+  }
+}
+
+.customBGimage,
+.customBGimageMobile {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.customBGimage {
+  background-image: var(--bgImage);
+}
+
+.customBGimageMobile {
+  // Mobile-first approach - apply mobile background by default
+  background-image: var(--bgImageMobile);
+
+  @include md-up {
+    // Reset to default background for larger screens if needed
+    background-image: var(--bgImage);
+  }
+}
+
+.hideBgImageMobile {
+  background-image: none; // Mobile-first - hide by default
+
+  @include md-up {
+    background-image: var(--bgImage); // Show on larger screens
+  }
+}
+
+//Colors
+.colorPrimary {
+  color: $color__site-primary;
+}
+.colorSecondary {
+  color: $color__site-secondary;
+}
+
+//Alignment
+.textLeft {
+  text-align: left;
+}
+.textCenter {
+  text-align: center;
+}
+
+.textLeftMobile {
+  text-align: left; // Mobile-first - left aligned by default
+
+  @include md-up {
+    text-align: center; // Center on larger screens
+  }
+}
+
+.textCenterDesk {
+  @include md-up {
+    text-align: center;
+  }
+}
+
+.toCenterMobile {
+  justify-content: center; // Mobile-first - centered by default
+  align-items: center;
+
+  @include md-up {
+    justify-content: flex-start; // Reset for larger screens
+    align-items: flex-start;
+  }
+}
+
+.toCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.toEnd {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.toStart {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.toStartDesk {
+  justify-content: center; // Mobile-first default
+  align-items: center;
+
+  @include md-up {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+//Padding
+.paddingBlock-0 {
+  padding-block: 0;
+}
+.paddingTop-0 {
+  padding-top: 0;
+}
+.paddingBottom-0 {
+  padding-bottom: 0;
+}
+
+//Margin
+.marginTop-10 {
+  margin-top: 10px;
+}
+
+//sizes
+.mw-mid {
+  width: min(100%, 700px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.mw-lg {
+  width: min(100%, 850px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.mw-xl {
+  width: min(100%, 1030px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//General
+.desktop-only {
+  display: none; // Mobile-first - hidden by default
+
+  @include sm-up {
+    display: block; // Show on desktop
+  }
+}
+
+.mobile-only {
+  display: block; // Mobile-first - shown by default
+
+  @include sm-up {
+    display: none; // Hide on larger screens
+  }
+}
+
+.borderRadius-10 {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content-slider-wrp {
+  width: 100%;
+  min-width: 0;
+}
+
+.fw-900{
+  font-weight: 900;
+}

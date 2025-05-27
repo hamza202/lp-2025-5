@@ -1,0 +1,77 @@
+.lp-2025-future {
+  padding: 20px 0;
+  
+  @include md-up {
+    padding: 30px 0;
+  }
+  
+  @include lg-up {
+    padding: 40px 0;
+  }
+  
+  &__features-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      display: none;
+    }
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    @include md-up {
+      justify-content: space-between;
+      overflow-x: visible;
+      padding-bottom: 0;
+    }
+  }
+  
+  &__feature {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: $color__site-primary;
+      
+     
+    }
+    
+    @include md-up {
+      flex: 1;
+      padding: 15px 20px;
+      white-space: normal;
+    }
+  }
+  
+  &__feature-title {
+    font-family: $font__titles;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color__site-primary;
+    margin: 0;
+    
+    @include md-up {
+      font-size: 25px;
+    }
+    
+    @include lg-up {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr; // Mobile layout first
+  gap: 40px;
+  grid-template-areas: "gridTitle" "gridCol-2" "gridCol-1";
+  grid-template-rows: repeat(1, minmax(0, auto));
+
+  @include md-up {
+    grid-template-columns: 1fr 1.2fr;
+    column-gap: 95px;
+    row-gap: 40px;
+    grid-template-areas: "gridTitle gridCol-2" "gridCol-1 gridCol-2";
+  }
+
+  &.switch {
+    grid-template-areas: "gridTitle" "gridCol-2" "gridCol-1"; // Mobile layout first
+
+    @include md-up {
+      grid-template-areas: "gridTitle gridCol-1" "gridCol-2 gridCol-1";
+    }
+  }
+
+  &.oneColumn {
+    grid-template-columns: 1fr;
+    grid-template-areas: "gridTitle" "gridCol-1" "gridCol-2";
+  }
+
+  .gridCol-1,
+  .gridCol-2 {
+    display: flex;
+    justify-content: center;
+    @include md-up {
+      justify-content: flex-start;
+    }
+  }
+}
+
+section {
+  padding-block: 40px; // Mobile padding first
+
+  @include md-up {
+    padding-block: 60px;
+  }
+}
+
+.container {
+  width: min(calc(100% - 40px), 1280px);
+  margin: auto;
+
+  &.fullOnMobile {
+    width: min(100%, 1280px); // Mobile width first
+
+    @include md-up {
+      width: min(calc(100% - 40px), 1280px);
+    }
+  }
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Mobile gap first
+
+  @include md-up {
+    gap: 40px;
+  }
+}
+
+.btns-wrp {
+  display: flex;
+  justify-content: flex-start; // Mobile alignment first
+  width: 100%;
+
+  @include md-up {
+    justify-content: center;
+  }
+}
+
+.btn-item {
+  display: flex;
+  flex-direction: column;
+  min-width: min(calc(100% - 40px), 278px); // Mobile width first
+  text-align: center;
+  justify-self: flex-start;
+
+  @include md-up {
+    min-width: min(calc(100% - 40px), 332px);
+  }
+}
+
+.btn {
+  padding: 14px 20px; // Mobile padding first
+  color: $color__site-secondary;
+  background-color: $color__site-primary;
+  text-align: center;
+  font-size: 20px; // Mobile font size first
+  line-height: 1.3;
+  border-radius: 1rem; // Mobile border radius first
+  transition: 0.3s all ease;
+  text-transform: capitalize;
+  font-weight: bold;
+  &:not(.hover-dark){
+    &:hover {
+      background-color: $color__site-secondary;
+      color: $color__site-white;
+    }
+  }
+
+  &.hover-dark{
+    &:hover{
+      background-color: darken($color__site-primary, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: $color__site-secondary;
+    color: $color__site-white;
+
+    &:hover:not(.hover-dark) {
+      color: $color__site-white;
+      background-color: $color__site-primary;
+    }
+    &.hover-dark{
+      &:hover{
+        background-color: darken($color__site-secondary, 10%);
+      }
+    }
+  }
+
+  @include md-up {
+    padding: 17px 48px;
+    border-radius: 1rem;
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../mixins/mixins-master";
+
+@include font-face("sofia-pro", "../fonts/SofiaProBold", 900, woff2);
+@include font-face("sofia-pro", "../fonts/SofiaProBold", 700, woff2);
+@include font-face("sofia-pro", "../fonts/SofiaProRegular", 400, woff2);
+
+$font__body: "sofia-pro", sans-serif;
+$font__titles: "sofia-pro", sans-serif;
+$font__size_base: 18px;
+$font__line-height-body: 20px;
