@@ -16,15 +16,6 @@
     padding-bottom: 15px;
     -webkit-overflow-scrolling: touch;
     
-    //&::-webkit-scrollbar {
-    //  height: ;
-    //  width: 0;
-    //  display: none;
-    //}
-    
-    //scrollbar-width: none;
-    //-ms-overflow-style: none;
-    
     @include md-up {
       justify-content: space-between;
       overflow-x: visible;
@@ -61,7 +52,7 @@
   
   &__feature-title {
     font-family: $font__titles;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 20px;
     color: $color__site-primary;
     margin: 0;

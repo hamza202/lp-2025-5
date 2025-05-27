@@ -187,3 +187,10 @@
 .fw-900{
   font-weight: 900;
 }
+.main-title{
+  font-size: 26px;
+  font-weight: 900;
+  @include md-up {
+    font-size: 36px;
+  }
+}
