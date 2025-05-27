@@ -16,14 +16,14 @@
     padding-bottom: 15px;
     -webkit-overflow-scrolling: touch;
     
-    &::-webkit-scrollbar {
-      height: 0;
-      width: 0;
-      display: none;
-    }
+    //&::-webkit-scrollbar {
+    //  height: ;
+    //  width: 0;
+    //  display: none;
+    //}
     
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    //scrollbar-width: none;
+    //-ms-overflow-style: none;
     
     @include md-up {
       justify-content: space-between;
