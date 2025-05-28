@@ -1,7 +1,34 @@
 .lp-2025-before-after {
-  .embla__slide {
-    img {
-      max-width: none;
+  .embla {
+    padding: 0 30px;
+    @include xl-up {
+      padding: 0;
+    }
+    position: relative;
+    .embla__nav{
+      position: static;
+      .embla__arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        &.embla__arrow--prev{
+          left: 0;
+          right: auto;
+        }
+        &.embla__arrow--next{
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+
+
+    .embla__slide {
+      img {
+        max-width: none;
+      }
     }
   }
+
 }

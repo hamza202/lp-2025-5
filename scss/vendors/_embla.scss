@@ -100,11 +100,17 @@
     &.primaryColor {
       background-image: url('data:image/svg+xml,<svg id="arrow-left-right-svgrepo-com" xmlns="http://www.w3.org/2000/svg" viewBox="27.78 0 13.45 24.7"><path id="Pfad_43467" data-name="Pfad 43467" d="M16.394,29.545a1.872,1.872,0,0,0,2.647,0l9.15-9.159a3.744,3.744,0,0,0,0-5.294L19.035,5.938a1.872,1.872,0,0,0-2.647,2.648l7.836,7.836a1.872,1.872,0,0,1,0,2.647L16.394,26.9A1.872,1.872,0,0,0,16.394,29.545Z" transform="translate(11.941 -5.39)" fill="%234040b85"/></svg>');
     }
+    &.whiteColor {
+      background-image: url('data:image/svg+xml,<svg id="arrow-left-right-svgrepo-com" xmlns="http://www.w3.org/2000/svg" viewBox="27.78 0 13.45 24.7"><path id="Pfad_43467" data-name="Pfad 43467" d="M16.394,29.545a1.872,1.872,0,0,0,2.647,0l9.15-9.159a3.744,3.744,0,0,0,0-5.294L19.035,5.938a1.872,1.872,0,0,0-2.647,2.648l7.836,7.836a1.872,1.872,0,0,1,0,2.647L16.394,26.9A1.872,1.872,0,0,0,16.394,29.545Z" transform="translate(11.941 -5.39)" fill="%23ffffff"/></svg>');
+    }
     &--prev {
       left: 0;
       background-image: url('data:image/svg+xml,<svg id="arrow-left-right-svgrepo-com" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.44 24.68"><path id="Pfad_43468" data-name="Pfad 43468" d="M13.893,5.938a1.872,1.872,0,0,0-2.648,0L2.1,15.1a3.744,3.744,0,0,0,0,5.294l9.155,9.155A1.872,1.872,0,0,0,13.9,26.9L6.063,19.062a1.872,1.872,0,0,1,0-2.647l7.829-7.829A1.872,1.872,0,0,0,13.893,5.938Z" transform="translate(-1 -5.39)" fill="%2341d9b0"/></svg>');
       &.primaryColor {
         background-image: url('data:image/svg+xml,<svg id="arrow-left-right-svgrepo-com" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.44 24.68"><path id="Pfad_43468" data-name="Pfad 43468" d="M13.893,5.938a1.872,1.872,0,0,0-2.648,0L2.1,15.1a3.744,3.744,0,0,0,0,5.294l9.155,9.155A1.872,1.872,0,0,0,13.9,26.9L6.063,19.062a1.872,1.872,0,0,1,0-2.647l7.829-7.829A1.872,1.872,0,0,0,13.893,5.938Z" transform="translate(-1 -5.39)" fill="%234040b85"/></svg>');
+      }
+      &.whiteColor {
+        background-image: url('data:image/svg+xml,<svg id="arrow-left-right-svgrepo-com" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.44 24.68"><path id="Pfad_43468" data-name="Pfad 43468" d="M13.893,5.938a1.872,1.872,0,0,0-2.648,0L2.1,15.1a3.744,3.744,0,0,0,0,5.294l9.155,9.155A1.872,1.872,0,0,0,13.9,26.9L6.063,19.062a1.872,1.872,0,0,1,0-2.647l7.829-7.829A1.872,1.872,0,0,0,13.893,5.938Z" transform="translate(-1 -5.39)" fill="%23ffffff"/></svg>');
       }
     }
     &.is-disabled {
