@@ -1,0 +1,13 @@
+.lp-2025-img-content{
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include md-up{
+      gap: 45px;
+    }
+    li{
+
+    }
+  }
+}

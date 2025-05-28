@@ -1,0 +1,16 @@
+.lp-2025-before-after {
+  .embla__slide {
+    img {
+      max-width: none;
+    }
+  }
+  .embla__nav {
+    .embla__dot {
+      border-color: $color__site-white;
+    }
+
+    .embla__dot--selected {
+      background-color: $color__site-white;
+    }
+  }
+}

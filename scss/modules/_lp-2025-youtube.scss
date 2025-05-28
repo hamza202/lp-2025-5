@@ -1,0 +1,22 @@
+.lp-2025-youtube{
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    @include md-up{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    gap: 20px;
+
+  }
+  &__video{
+    overflow: hidden;
+    border-radius: 20px;
+    aspect-ratio: 658 / 383;
+    iframe{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

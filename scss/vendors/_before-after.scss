@@ -1,0 +1,60 @@
+.beforeSlider {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 100%;
+  aspect-ratio: 77 / 71;
+}
+
+.after-image {
+  display: block;
+}
+
+.before-image {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.beforeSlider img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.before-image img,
+.after-image img {
+  display: block;
+}
+.resizer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.resizer:after {
+  background: #fff;
+  content: "";
+  position: absolute;
+  margin: 0 0 0 -12px;
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  clip-path: polygon(50% 0, 50% 0, 100% 50%, 50% 100%, 50% 100%, 0% 50%);
+}

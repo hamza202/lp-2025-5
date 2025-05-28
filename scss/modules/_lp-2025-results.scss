@@ -1,0 +1,23 @@
+.lp-2025-results{
+  background-color: $color__site-lightgray;
+  &__title{
+    .main-title{
+      max-width: 870px;
+      margin: 0 auto 25px;
+    }
+    p{
+      font-size: 26px;
+      margin-bottom: 30px;
+      @include md-up {
+        font-size: 36px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .embla__slide{
+    img{
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const embla__sliders = document.querySelectorAll(".embla");
-
   embla__sliders.forEach((embla__slider) => {
     let slidesToScroll__mobile = embla__slider.getAttribute("slides-mobile") || 1;
     let slidesToScroll__tab = embla__slider.getAttribute("slides-tab") || 1;
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         containScroll: "trimSnaps",
         breakpoints: {
           "(min-width: 768px)": { loop: true, slidesToScroll: slidesToScroll__tab },
-          "(min-width: 992px)": { loop: true, slidesToScroll: slidesToScroll__desk, active: false }
+          "(min-width: 1080px)": { loop: true, slidesToScroll: slidesToScroll__desk, active: false }
         }
       };
     } else {
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesToScroll: slidesToScroll__mobile,
         breakpoints: {
           "(min-width: 768px)": { loop: embla__loop, slidesToScroll: slidesToScroll__tab },
-          "(min-width: 992px)": { loop: embla__loop, slidesToScroll: slidesToScroll__desk }
+          "(min-width: 1080px)": { loop: embla__loop, slidesToScroll: slidesToScroll__desk }
         }
       };
     }
@@ -116,31 +115,3 @@ document.addEventListener("DOMContentLoaded", () => {
       .on("select", toggleDotBtnsActive);
   });
 });
-
-// window.addEventListener("load", function () {
-//   //Vimeo videos
-//   document.querySelectorAll(".ys-custom-vimeo")?.forEach(function (vimeoElement) {
-//     vimeoElement.addEventListener("click", function () {
-//       document.querySelectorAll(".ys-custom-vimeo").forEach(function (ve) {
-//         ve.classList.remove("active");
-//       });
-//       const videoId = this.getAttribute("data-vimeo-id");
-//       const iframe = document.createElement("iframe");
-//       const vimeo_iframe_wrp = vimeoElement.querySelector(".ys-custom-vimeo__iframe-wrp");
-//       iframe.src = "https://player.vimeo.com/video/" + videoId + "?autoplay=1";
-//       iframe.frameBorder = "0";
-//       iframe.allow = "autoplay; fullscreen; picture-in-picture";
-//       iframe.style.width = "100%";
-//       iframe.style.height = "100%";
-//       iframe.style.position = "absolute";
-//       iframe.style.top = "0";
-//       iframe.style.left = "0";
-//       iframe.allowFullscreen = true;
-//       vimeo_iframe_wrp.innerHTML = "";
-//       vimeoElement.classList.add("active");
-//       vimeo_iframe_wrp.appendChild(iframe);
-//     });
-//   });
-// });
-
-
