@@ -1,0 +1,18 @@
+.lp-2025-what-does-do{
+  background-color: $color__site-lightgray;
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    li{
+      background-color: $color__site-white;
+      padding: 5px 20px;
+      line-height: 1.5;
+      font-size: 17px;
+      @include md-up {
+        padding: 10px 20px;
+        font-size: 26px;
+      }
+    }
+  }
+}

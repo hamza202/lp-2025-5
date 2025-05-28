@@ -90,7 +90,8 @@ section {
 
 .btn {
   padding: 14px 20px; // Mobile padding first
-  color: $color__site-secondary;
+  color: $color__site-white;
+  display: inline-block;
   background-color: $color__site-primary;
   text-align: center;
   font-size: 20px; // Mobile font size first
@@ -128,8 +129,8 @@ section {
   }
 
   @include md-up {
-    padding: 17px 48px;
+    padding: 17px 40px;
     border-radius: 1rem;
-    font-size: 30px;
+    font-size: 29px;
   }
 }
