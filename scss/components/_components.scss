@@ -16,7 +16,7 @@
     grid-template-areas: "gridTitle" "gridCol-2" "gridCol-1"; // Mobile layout first
 
     @include md-up {
-      grid-template-areas: "gridTitle gridCol-1" "gridCol-2 gridCol-1";
+      grid-template-areas: "gridCol-2 gridTitle" "gridCol-2 gridCol-1";
     }
   }
 
@@ -36,7 +36,13 @@
       grid-template-areas: "gridTitle gridCol-2" "gridCol-1 gridCol-2";
       grid-template-rows: auto auto;
       align-items: center;
-      row-gap: 20px; // Reduce row gap for closer button placement
+      row-gap: 20px;
+    }
+    &.switch {
+      @include md-up {
+        grid-template-areas: "gridCol-2 gridTitle" "gridCol-2 gridCol-1";
+        grid-template-rows: auto auto;
+      }
     }
     .gridTitle {
       align-self: center;
@@ -44,15 +50,10 @@
       flex-direction: column;
       justify-content: center;
       margin-bottom: 0;
-      height: 100%; // Ensure full height
-      ul {
-        margin-bottom: 0; // Remove bottom margin from list
-      }
+      height: 100%;
     }
     .gridCol-1 {
-      margin-top: 0; // Reset margin
-      align-self: flex-start; // Align button to top of its grid area
-      padding-top: 0; // Remove padding
+      align-self: flex-start;
     }
   }
 
@@ -71,10 +72,6 @@
     &.align-items-center {
       align-items: center;
     }
-  }
-
-  .mb-0 {
-    margin-bottom: 0 !important;
   }
 
   .gridCol-1,
