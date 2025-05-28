@@ -216,7 +216,7 @@
   width: 100%;
 }
 
-.bd-gradient{
+.bg-gradient{
   background: linear-gradient(0deg,rgba(0, 51, 102, 1) 15%, rgba(6, 1, 148, 1) 100%);
   .main-title{
     color: $color__site-white;
@@ -241,4 +241,15 @@
 }
 .bg-lightGray{
   background-color: $color__site-lightgray;
+}
+.white-dote{
+  .embla__nav {
+    .embla__dot {
+      border-color: $color__site-white;
+    }
+
+    .embla__dot--selected {
+      background-color: $color__site-white;
+    }
+  }
 }

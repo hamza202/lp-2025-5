@@ -1,0 +1,51 @@
+.lp-2025-benefits {
+  &__card {
+    padding: 25px;
+    @include lg-up {
+      padding: 30px;
+    }
+    background-color: $color__site-white;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__image {
+    img {
+      aspect-ratio: 23 / 19;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50px;
+    }
+  }
+  
+  &__content {
+    padding-top: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    
+    @include md-up {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__text {
+    font-size: 17px;
+    margin-bottom: 0;
+    flex: 1;
+    
+    @include md-up {
+      font-size: 25px;
+    }
+  }
+}
