@@ -1,4 +1,10 @@
 .lp-2025-img-content{
+  .main-title{
+    text-align: center;
+    @include md-up {
+      text-align: left;
+    }
+  }
   ul{
     display: flex;
     flex-direction: column;
@@ -7,6 +13,14 @@
       gap: 45px;
     }
     li{
+      font-size: 17px;
+      @include lg-up {
+        font-size: 20px;
+      }
+      @include xl-up {
+        font-size: 26px;
+      }
+
       b{
         display: block;
       }

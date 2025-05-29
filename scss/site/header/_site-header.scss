@@ -23,23 +23,71 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .header-logo {
+        img {
+          width: 160px;
+          @include sm-up {
+            width: auto;
+          }
+        }
+      }
+
       .whatsapp-flow-btn {
         display: inline-flex;
         align-items: center;
-        padding: 12px;
+        padding: 10px;
+        @include sm-up {
+          padding: 12px;
+        }
         border-radius: 100px;
-        border: 2px solid #F6FCF7;
+        border: 2px solid #128C7E;
         background-color: $color__site-whatsapp-bg;
-        gap:6px;
-        span{
-          font-size: 15px;
+        gap: 6px;
+
+        span {
+          font-size: 13px;
+          @include sm-up {
+            font-size: 15px;
+          }
           font-weight: bold;
           color: $color__site-white;
           display: block;
-          max-width: 100px;
+          max-width: 85px;
+          @include sm-up {
+            max-width: 100px;
+          }
           line-height: 1.1;
+        }
+        transition: all 0.3s ease;
+        &:hover{
+          background-color: #25D366;
+          border-color: #075E54;
         }
       }
     }
   }
 }
+
+.fixed-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  padding: 15px 0;
+  animation: slideDown 0.3s forwards;
+}
+
+.d-none {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+

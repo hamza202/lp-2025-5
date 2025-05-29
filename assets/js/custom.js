@@ -151,4 +151,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
+
+
+  const header = document.querySelector("header");
+  const headerLogo = document.querySelector(".header-logo");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 150) {
+      header.classList.add("fixed-header");
+      headerLogo.classList.add("d-none");
+    } else {
+      header.classList.remove("fixed-header");
+      headerLogo.classList.remove("d-none");
+    }
+  });
+
 });
