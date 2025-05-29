@@ -38,12 +38,14 @@
       align-items: center;
       row-gap: 20px;
     }
+
     &.switch {
       @include md-up {
         grid-template-areas: "gridCol-2 gridTitle" "gridCol-2 gridCol-1";
         grid-template-rows: auto auto;
       }
     }
+
     .gridTitle {
       align-self: center;
       display: flex;
@@ -52,6 +54,7 @@
       margin-bottom: 0;
       height: 100%;
     }
+
     .gridCol-1 {
       align-self: flex-start;
     }
@@ -63,12 +66,15 @@
     &.d-flex {
       display: flex;
     }
+
     &.flex-column {
       flex-direction: column;
     }
+
     &.justify-content-center {
       justify-content: center;
     }
+
     &.align-items-center {
       align-items: center;
     }
@@ -81,19 +87,23 @@
     @include md-up {
       justify-content: flex-start;
     }
-    &.justify-center{
+
+    &.justify-center {
       @include md-up {
         justify-content: center;
       }
     }
   }
 }
+
 .gridTitle {
   grid-area: gridTitle;
 }
+
 .gridCol-1 {
   grid-area: gridCol-1;
 }
+
 .gridCol-2 {
   grid-area: gridCol-2;
 }
@@ -165,15 +175,16 @@ section {
   @include sm {
     width: 100%;
   }
-  &:not(.hover-dark){
+
+  &:not(.hover-dark) {
     &:hover {
       background-color: $color__site-secondary;
       color: $color__site-white;
     }
   }
 
-  &.hover-dark{
-    &:hover{
+  &.hover-dark {
+    &:hover {
       background-color: darken($color__site-primary, 10%);
     }
   }
@@ -186,8 +197,9 @@ section {
       color: $color__site-white;
       background-color: $color__site-primary;
     }
-    &.hover-dark{
-      &:hover{
+
+    &.hover-dark {
+      &:hover {
         background-color: darken($color__site-secondary, 10%);
       }
     }
@@ -200,5 +212,135 @@ section {
   }
   @include xl-up {
     padding: 17px 40px;
+  }
+}
+
+// General accordion items
+.accordion-container {
+  display:  flex;
+  flex-direction:  column;
+  gap: 20px;
+}
+
+details {
+  summary {
+    padding: 30px;
+    font-size: 0;
+
+    &::marker {
+      display: none;
+    }
+  }
+
+  .accordion__quesion {
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px; // Mobile padding first
+
+    @include md-up {
+      padding-right: 70px;
+    }
+
+    h3 {
+      font-size: 20px; // Mobile font size first
+      line-height: 30px; // Mobile line height first
+      font-family: $font__body;
+      color: $color__site-dark;
+      padding-right: 40px; // Mobile padding first
+
+      @include md-up {
+        font-size: 22px;
+        line-height: 32px;
+        padding-right: 0;
+      }
+
+      &::before,
+      &::after {
+        content: " ";
+        width: 14px;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: 37px; // Mobile positioning first
+        transform: none; // Mobile transform first
+        transition: 0.3s all ease;
+        background-color: $color__site-white;
+        border-radius: 1px;
+        z-index: 1;
+
+        @include md-up {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .accordion__answer {
+    position: relative;
+
+    p,
+    ul li,
+    a {
+      font-size: 20px; // Mobile font size first
+      line-height: 30px; // Mobile line height first
+      font-family: $font__body;
+      color: $color__site-dark;
+
+      @include md-up {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+  }
+
+  &.accordion__item {
+    background-color: $color__site-white;
+    border-radius: 14px;
+    box-shadow: 0px 3px 6px #00000029;
+
+    span.icon {
+      position: absolute;
+      width: 35px;
+      height: 36px;
+      display: inline-block;
+      right: 20px;
+      background: $color__site-secondary;
+      top: 20px; // Mobile positioning first
+      transform: none; // Mobile transform first
+      border-radius: 50%;
+
+      @include md-up {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &.accordion__item[open] {
+    .accordion__answer {
+      padding: 0 30px 30px 30px; // Mobile padding first
+
+      @include md-up {
+        padding: 0 60px 30px 30px;
+      }
+    }
+
+    h3 {
+      &::after {
+        rotate: -180deg;
+      }
+
+      &::before {
+        rotate: -90deg;
+        transform: translateX(-1px);
+      }
+    }
   }
 }

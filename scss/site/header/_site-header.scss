@@ -2,9 +2,44 @@
   HEADER STYLES
   ---------------------------------------------------------------------------------*/
 body {
-  header {
-    min-height: 150px;
-    position: fixed;
+  position: relative;
+
+  .lp-2025-header {
+    padding: 25px 0;
+    position: absolute;
     inset: 0 0 auto 0;
+    z-index: 10;
+
+    .container {
+      @include md-up {
+        padding: 0 30px;
+      }
+      @include lg-up {
+        padding: 0 40px;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .whatsapp-flow-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px;
+        border-radius: 100px;
+        border: 2px solid #F6FCF7;
+        background-color: $color__site-whatsapp-bg;
+        gap:6px;
+        span{
+          font-size: 15px;
+          font-weight: bold;
+          color: $color__site-white;
+          display: block;
+          max-width: 100px;
+          line-height: 1.1;
+        }
+      }
+    }
   }
 }
